@@ -1,0 +1,156 @@
+lang.changeed: "この言語は{1}です。"
+lang.error: "言語データを取得できませんでした。"
+player.changelanguage: "§aサーバーの言語を§e{1}§aに変更しました。"
+player.vote.accpt: "承認"
+player.vote.deny: "拒否"
+player.vote.already: "すでに"
+player.vote.error: "エラー"
+
+#---------------------------アイテム---------------------------
+
+item.nodebuff.potion: "§l§cフェザー"
+item.lobby.ffa: "§l§c» §r§7FFA §l§c« §r§8[クリック]"
+item.lobby.duel: "§l§c» §r§7デュエル §l§c« §r§8[クリック]"
+item.lobby.practice: "§l§c» §r§7プラクティス §l§c« §r§8[クリック]"
+item.lobby.party: "§l§c» §r§7パーティー §l§c« §r§8[クリック]"
+item.lobby.history: "§l§c» §r§7デュエル履歴 §l§c« §r§8[クリック]"
+item.lobby.cosmetic: "§l§c» §r§7コスメティック §l§c« §r§8[クリック]"
+item.lobby.settings: "§l§c» §r§7設定 §l§c« §r§8[クリック]"
+item.lobby.region: "§l§c» §r§7リージョン §l§c« §r§8[クリック]"
+item.lobby.spectate: "§l§c» §r§7観戦 §l§c« §r§8[クリック]"
+item.lobby.update: "§l§c» §r§7更新履歴 §l§c« §r§8[クリック]"
+item.lobby.report: "§l§c» §r§7通報 §l§c« §r§8[クリック]"
+item.lobby.knockback: "ノックバックロッド"
+item.queue.leave: "§l§c退出"
+item.feather: "§l§cフェザー"
+
+#---------------------------フォーム---------------------------
+
+form.joinffa: "参加するFFAを選択してください。"
+
+#---------------------------デュエル---------------------------
+
+form.duel.name: "デュエル"
+form.duel.content: "モードを選択してください。"
+form.duel.game.content: "プレイするゲームを選択してください。"
+form.duel.request.none: "リクエストを送るプレイヤーがいません。"
+form.duel.request.select: "リクエストを送るプレイヤーを選択してください。"
+form.duel.request.game: "リクエストを送るゲームを選択してください。"
+form.duel.accept.none: "承認できるデュエルリクエストがありません。"
+
+form.duel.ranked: "ランク付きデュエル"
+form.duel.unranked: "ランクなしデュエル"
+form.duel.bot: "ボットデュエル"
+form.duel.request: "デュエルリクエスト"
+form.duel.accept: "デュエル承認"
+form.duel.recent: "デュエル履歴"
+
+form.duel.recent.content: "試合履歴は§dPLUS§rランク以上で利用可能です。"
+form.duel.recent.buy: "§dPLUS§rランクを購入する"
+form.duel.recent.notbuy: "いいえ、結構です。"
+
+#---------------------------プラクティス---------------------------
+
+form.practice.name: "プラクティス"
+
+#---------------------------パーティー---------------------------
+
+form.party.name: "パーティー"
+form.party.create: "パーティーを作成"
+form.party.creaye.public: "公開"
+form.party.creaye.private: "非公開"
+form.party.join: "パーティーに参加"
+form.party.invite: "招待されたパーティー"
+form.party.list: "パーティーリスト"
+
+#---------------------------観戦---------------------------
+
+form.spectate.name: "観戦"
+form.spectate.none: "観戦できる試合がありません。"
+
+#---------------------------コスメティック---------------------------
+
+form.cosmetics.name: "コスメティック"
+
+#---------------------------設定---------------------------
+
+form.settings.name: "設定"
+form.settings.general: "一般設定"
+form.settings.ffa: "FFA設定"
+form.settings.cosmetic: "コスメティック設定"
+form.settings.kit: "キット設定"
+form.settings.general.ui: "UI設定"
+form.settings.general.visal: "ビジュアル"
+form.settings.general.other: "その他"
+
+form.settings.general.ui.scoreboard: "スコアボード"
+form.settings.general.ui.actionbar: "アクションバー"
+form.settings.general.ui.chat: "チャット"
+form.settings.general.ui.title: "タイトル"
+form.settings.general.ui.nameinfo: "ネーム設定"
+
+form.settings.general.visal.critical.crit: "クリティカルエフェクト"
+form.settings.general.visal.night_vision: "ナイトビジョン"
+form.settings.general.visal.ligiting_kill: "雷撃キル"
+form.settings.general.visal.smoothpearl: "スムーズパール"
+form.settings.general.visal.time: "時間設定"
+form.settings.general.visal.time.time: "§e昼時間: "
+
+#---------------------------一般---------------------------
+
+general.combo: "コンボ"
+general.reach: "リーチ"
+general.death: "死亡"
+general.kill: "キル"
+general.online: "オンライン"
+general.enable: "有効"
+general.disable: "無効"
+general.return: "戻る"
+general.reset: "リセット"
+
+#---------------------------デュエル---------------------------
+
+duel.matched: "§cデュエルがマッチしました。"
+duel.starting: "§7開始まで.."
+duel.start: "§cデュエル開始！"
+duel.startsub: "§7戦え！"
+duel.win: "§gあなたの勝利!!"
+duel.scored: "<player> がスコアを獲得！"
+duel.winsub: "§aゲーム終了！"
+duel.lose: "§c敗北..."
+duel.drawsub: "§8ゲーム終了"
+duel.draw: "§c引き分け"
+duel.losesub: "§8ゲーム終了"
+duel.dissableelo: "§7[§l§4警告§7]§c この試合ではレートは変動しません。"
+duel.respawning: "§cリスポーン中..."
+duel.respawned: "§aリスポーン完了！"
+duel.bed.break.red: "§cレッドチームのベッドが破壊されました。"
+duel.bed.break.blue: "§9ブルーチームのベッドが破壊されました。"
+
+#---------------------------パーティー---------------------------
+
+party.private: "非公開"
+party.public: "公開"
+party.duel: "§cパーティーデュエル"
+party.split: "§cスプリットデュエル"
+party.ffa: "§cパーティーFFA"
+party.vote: "§c投票デュエル"
+party.join: "§cパーティー参加"
+party.invite: "§cパーティー招待"
+party.list: "§cパーティーリスト"
+party.settings: "§cパーティー設定"
+party.settings.invite: "プレイヤーを招待"
+party.settings.promote: "オーナー昇格"
+party.settings.kick: "プレイヤーをキック"
+party.settings.ban: "プレイヤーをBAN"
+party.settings.disband: "パーティー解散"
+party.settings.open: "オープン"
+party.settings.game: "ゲーム設定"
+party.settings.game.knockback: "ノックバック設定"
+party.settings.game.delay: "ヒット遅延設定"
+party.settings.game.maxhp: "最大HP設定"
+party.settings.game.cooltime: "クールタイム設定"
+party.settings.game.map: "マップ選択"
+party.settings.game.respawn: "リスポーン時間"
+
+party.item.vote: "§l§c» §r§7投票 §l§c« §r§8[クリック]"

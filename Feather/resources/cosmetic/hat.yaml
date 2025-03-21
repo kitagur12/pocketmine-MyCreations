@@ -1,0 +1,4 @@
+killphase:
+    defaltphase: §c<player> §7was killed by §a<killer>
+    dummykillphase1: false
+    dummykillphase2: false

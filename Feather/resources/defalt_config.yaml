@@ -1,0 +1,1917 @@
+region: "Dev"
+
+maintenance: false
+
+color: "§v"
+
+texture_packs:
+# pack_UUitem:: "encryption_Key"
+
+database:
+  main:
+    host: 127.0.0.1:12766 #ip or sqlite path
+    username: root
+    password: "ql2M6QjfkdzSU70e51caiIW5tikHtJgnrT3z7WMduzJhg8BXH6"
+    schema: feather
+
+api: ""
+
+vote: ""
+
+webhooks:
+  status: "" #server status
+  moderate: "" #ban.kick,freeze log
+  logs: "" #duel,event,other
+  chat: "" #player
+
+chatformat: <player> §7§l»§r <message>
+
+rank:
+  owner:
+    show: Owner
+    color: §4
+    chatcooltime: 0
+    partysize: 100
+    permission:
+      - server.command
+      - server.admin
+  manager:
+    show: Manager
+    color: §2
+    permission:
+      - server.command
+      - server.admin
+  admin:
+    show: Admin
+    color: §c
+    chatcooltime: 0
+    partysize: 100
+    permission:
+      - server.command
+      - server.admin
+  developer:
+    show: Dev
+    color: §b
+    chatcooltime: 0
+    partysize: 100
+    permission:
+      - server.command
+      - server.admin
+  sysdev:
+    show: SE
+    color: §g
+    chatcooltime: 0
+    partysize: 100
+    permission:
+      - server.command
+      - server.admin
+  builder:
+    show: Builder
+    color: §e
+    chatcooltime: 0
+    partysize: 100
+    permission:
+      - server.command
+  deginer:
+    show: Deginer
+    color: §e
+    chatcooltime: 0
+    partysize: 100
+    permission:
+      - server.command
+  yt:
+    show: YT
+    color: §v
+    chatcooltime: 1
+    partysize: 10
+    permission:
+      - server.command
+  fmous:
+    show: Famous
+    color: §d
+    chatcooltime: 1
+    partysize: 10
+    permission:
+      - server.command
+  elite:
+    show: Elite
+    color: §g
+    chatcooltime: 1
+    partysize: 10
+    permission:
+      - server.command
+  plus:
+    show: +
+    color: §a
+    chatcooltime: 1
+    partysize: 10
+    permission:
+      - server.command
+  member:
+    show: ""
+    color: §7
+    chatcooltime: 2
+    partysize: 6
+    permission:
+      - server.command
+  mute:
+    show: Mute
+    color: §8
+    permission:
+      - server.mute
+
+games:
+  lobby:
+    lobby:
+      name: lobby
+      map: lobby
+      kit: lobby_v1
+      damagetype: none
+    queue:
+      name: queue
+      kit: queue_v1
+    queue2:
+      name: queue2
+      kit: queue2_v1
+    void:
+      name: void
+      kit: void_v1
+    party:
+      name: Party
+      kit: party_v1
+    party_player:
+      name: Party Player
+      kit: party_player_v1
+    spectate:
+      name: spectate
+      kit: void_v1
+  ffa:
+    nodebuff:
+      name: Nodebuff
+      icon: 793 #vanillaitemid
+      meta: 21
+      slot: 10
+      map: ffa_nodebuff
+      kit: nodebuff_v1
+      knockback: mineage_kb
+      hitdelay: 10
+      itemcooltime: nodebuff
+      attack: true
+      combat: single
+      critical: true
+      damagetype: default
+      effect: SPEED-0
+    nodebuff-nocrit:
+      name: Nodebuff(NoCritical)
+      icon: 428
+      meta: 28
+      slot: 11
+      map: ffa_nodebuff_nocrit
+      kit: nodebuff_v1
+      knockback: mineage_kb
+      hitdelay: 10
+      itemcooltime: nodebuff
+      attack: true
+      combat: single
+      critical: false
+      damagetype: default
+      effect: SPEED-0
+    builduhc:
+      name: BuildUHC
+      icon: 388
+      slot: 12
+      map: ffa_builduhc
+      kit: builduhc_v1
+      knockback: mineage_kb
+      hitdelay: 10
+      itemcooltime: builduhc
+      attack: true
+      combat: multiple
+      critical: true
+      blockaccess: OAK_PLANKS,COBBLESTONE,WATER,LAVA
+      damagetype: CAUSE_FIRE,CAUSE_ENTITY_ATTACK,CAUSE_LAVA,CAUSE_PROJECTILE,CAUSE_FIRE_TICK
+    midfight:
+      name: MidFight
+      icon: 440
+      slot: 13
+      map: ffa_midfight
+      kit: midfight_v1
+      knockback: mineage_kb
+      hitdelay: 10
+      itemcooltime: none
+      attack: true
+      combat: single
+      critical: true
+      damagetype: default
+    combo:
+      name: combo
+      icon: 281
+      slot: 14
+      map: ffa_combo
+      kit: combo_v1
+      knockback: combo
+      hitdelay: 2
+      itemcooltime: combo
+      attack: true
+      combat: single
+      critical: true
+      damagetype: default
+    otic:
+      name: OTIC
+      icon: 324
+      slot: 15
+      map: ffa_otic
+      kit: otic_v1
+      knockback: mineage_kb
+      hitdelay: 10
+      itemcooltime: otic
+      attack: true
+      combat: multiple
+      critical: true
+      damagetype: default
+    crystal:
+      name: Crystal
+      icon: 796
+      slot: 16
+      map: ffa_crystal
+      kit: crystal_v1
+      knockback: mineage_kb
+      hitdelay: 10
+      itemcooltime: crystal
+      attack: true
+      combat: multiple
+      critical: true
+      breaktime: 600 #設置ブロックの破壊までの秒数
+      blockaccess: OBSIDIAN
+      damagetype: CAUSE_FIRE,CAUSE_ENTITY_ATTACK,CAUSE_LAVA,CAUSE_PROJECTILE,CAUSE_FIRE_TICK,CAUSE_ENTITY_EXPLOSION
+  duel:
+    nodebuff:
+      name: Nodebuff
+      icon: 793
+      damage: 21
+      slot: 10
+      meta: 21
+      map: duel_type1
+      dueltype: normal
+      deathheight: -64
+      kit: nodebuff_v1
+      knockback: mineage_kb
+      hitdelay: 10
+      itemcooltime: nodebuff
+      attack: true
+      critical: true
+      damagetype: default
+      effect:
+        - SPEED-0
+    bridge:
+      name: Bridge
+      icon: -556 #アイテムID
+      slot: 11
+      map: duel_score
+      dueltype: score
+      subtype: score
+      scoretype: type1
+      point: 5
+      deathheight: -10
+      kit: bridge_v1
+      knockback: mineage_kb
+      hitdelay: 10
+      blockaccess: WOOL
+      itemcooltime: bridge
+      attack: true
+      critical: true
+      damagetype: CAUSE_ENTITY_ATTACK,CAUSE_PROJECTILE
+    bedfight:
+      name: BedFight
+      icon: 444
+      slot: 12
+      meta: 14
+      map: duel_bed
+      dueltype: bed
+      deathheight: 20
+      respawn: 5
+      kit: bedfight_v1
+      knockback: mineage_kb
+      hitdelay: 10
+      itemcooltime: nodebuff
+      blockaccess: OAK_PLANKS,WOOL,END_STONE,BED
+      attack: true
+      critical: true
+      damagetype: default
+    boxing:
+      name: Boxing
+      icon: 423
+      slot: 13
+      map: duel_type1
+      dueltype: score
+      subtype: hit
+      scoretype: type2
+      point: 100
+      deathheight: -10
+      kit: boxing
+      knockback: mineage_kb
+      hitdelay: 10
+      itemcooltime: none
+      blockaccess: false
+      attack: true
+      critical: true
+      damagetype: default
+    midfight:
+      name: Midfight
+      icon: 373
+      slot: 14
+      map: duel_type1
+      dueltype: score
+      subtype: kill
+      scoretype: type1
+      point: 5
+      deathheight: -64
+      kit: midfight_v1
+      knockback: mineage_kb
+      hitdelay: 10
+      itemcooltime: none
+      blockaccess: false
+      attack: true
+      critical: true
+      damagetype: default
+    pearlfight:
+      name: PearlFight
+      icon: 448
+      slot: 15
+      map: duel_score
+      dueltype: score
+      subtype: kill
+      resetblock: true
+      scoretype: type1
+      point: 5
+      deathheight: -10
+      kit: pearlfight_v1
+      knockback: mineage_kb
+      hitdelay: 10
+      blockaccess: WOOL
+      itemcooltime: bridge
+      attack: true
+      critical: true
+      damagetype: default
+  party:
+    hct:
+      name: HCTeams
+      icon: 323
+      slot: 10
+      map: duel_type1
+      dueltype: normal
+      scoretype: hct
+      deathheight: -10
+      kit: pearlfight_v1
+      knockback: mineage_kb
+      hitdelay: 10
+      blockaccess: WOOL
+      itemcooltime: bridge
+      attack: true
+      critical: true
+      damagetype: default
+  practice:
+    clutch:
+      name: Clutch #表示錠のkit名
+      icon: 24
+      slot: 11
+      map: practice_clutch #mapで指定した名前
+      type: clutch
+      deathheight: 10
+    chestrooting:
+      name: ChestRooting
+      icon: 54
+      slot: 12
+      map: practice_chest
+      type: chestrooting
+    bridge:
+      name: Bridge
+      icon: -556
+      slot: 13
+      map: practice_bridge
+      type: bridge
+      deathheight: 10
+    bedsurround:
+      name: BedSurround
+      icon: 444
+      slot: 14
+      map: practice_bed
+      type: bedsurround
+    trackaim:
+      name: Tracking Aim
+      icon: 542
+      slot: 15
+      map: practice_chest
+      type: trackaim
+    "360":
+      name: 360°
+      icon: -967
+      slot: 16
+      map: practice_chest
+      type: "360"
+    lavapool:
+      name: Lava Pool
+      icon: 388
+      slot: 21
+      map: practice_chest
+      type: lavapool
+    reduce:
+      name: Reduce
+      icon: 345
+      slot: 22
+      map: practice_chest
+      type: reduce
+    projectile:
+      name: Projectile
+      icon: 399
+      slot: 23
+      map: practice_chest
+      type: projectile
+    aim:
+      name: Aim
+      icon: -239
+      slot: 10
+      map: practice_chest
+      type: aim
+    standing:
+      name: Standing
+      icon: 0
+      slot: 100
+      kit: practice_v1
+  bot:
+    bedsurround:
+      name: BedSurround
+      icon: 444
+      slot: 4
+      map: duel_type1
+      kit: nodebuff
+      knockback: mineage_kb
+      hitdelay: 10
+      itemcooltime: nodebuff
+      attack: true
+      critical: true
+      damagetype: false
+
+itemcooltime:
+  nodebuff:
+    splash_potion: 0
+    splash_potion_slot: 12
+    ender_pearl: 10
+    ender_pearl_slot: 14
+    priority_item: ender_pearl #2つ以上がfalseでない場合どれを経験値バーに表示するか(項目がない場合一番最初の有効な項目)
+  builduhc:
+    gapple: 5
+    gapple_slot: 12
+    gapple_head: 5
+    gapple_head_slot: 14
+    priority_item: gapple
+  otic:
+    arrow: 5
+    arrow_slot: 13
+    priority_item: arrow
+  combo:
+    priority_item: arrow
+  crystal:
+    ender_pearl: 3
+    ender_pearl_slot: 12
+    gapple: 3
+    gapple_slot: 14
+    priority_item: ender_pearl
+  bridge:
+    arrow: 5
+    arrow_slot: 13
+    priority_item: arrow
+  none:
+    priority_item: arrow
+  compatible_items:
+    ender_pearl: false
+    snowball: false
+    gapple: false
+    enchant_gapple: false
+    gapple_head: false #UHCのやつ
+    arrow: false
+    potion: false
+    splash_potion: false
+    totem: false #死んだ時がflag
+
+map:
+  lobby:
+    map: mapp
+    spawn:
+      - [0, 60, 5, 0, 0]
+  ffa_nodebuff:
+    map: NoDebuff
+    spawn:
+      - [322, 65, 531, 0, 0]
+  ffa_nodebuff_nocrit:
+    map: citadel
+    spawn:
+      - [9469, 82, 9528]
+  ffa_midfight:
+    map: garden
+    spawn:
+      - [2094, 79, 1910]
+  ffa_builduhc:
+    map: NoDebuffFFA
+    spawn:
+      - [0, 68, 0, 0, 0] #x,y,z,rotx,roty
+  ffa_combo:
+    map: Mod
+    spawn:
+      - [12394, 70, 12407, 0, 0]
+  ffa_otic:
+    map: Mod
+    spawn:
+      - [12394, 70, 12407, 0, 0]
+  ffa_crystal:
+    map: crystal_ffa
+    spawn:
+      - [4862, 69, -608, 0, 0] #x,y,z,rotx,roty
+  duel_type1: #duelのmapは複数（array）でもいいがスポーン地点は必ず2つ（未満でも3つ以上でも不可）設定しなければならない
+    map:
+      - duel_1
+      - lollipop
+      - yinyang
+    duel_1:
+      - [4906, 78, 1106, 90, 0]
+      - [4834, 78, 1106, -90, 0]
+    lollipop:
+      - [5856, 69, 6146, 0, 0]
+      - [5856, 69, 6229, -180, 0]
+    yinyang:
+      - [910, 95, 870, 0, 0]
+      - [910, 95, 958, -180, 0]
+  duel_type2:
+    map:
+      - duel_1
+    duel_1:
+      - [4906, 78, 1106, 90, 0]
+      - [4834, 78, 1106, -90, 0]
+  duel_score:
+    map:
+      - bridge_1
+    bridge_1:
+      - [1000, 1, 25, 180, 0] #赤
+      - [1000, 1, -25, 0, 0] #青
+      - [980, -10, 40, 1020, 10, -40] #ブロック設置可能範囲（始点xyz座標,終点xyz座標）
+      - [1001, -1, 29, 999, -1, 31] #4,5番目はscore範囲（red始点xyz座標,red終点xyz座標）
+      - [999, -1, -31, 1001, -1, -29] #（blue始点xyz座標,blue終点xyz座標）
+  duel_bed:
+    map:
+      - bed_1
+    bed_1:
+      - [4053, 26, -39999, 90, 0]
+      - [4007, 26, -39999, -90, 0]
+      - [4078, 20, -39975, 3979, 43, -40023] #ブロック設置可能範囲（始点xyz座標,終点xyz座標）
+  practice_clutch:
+    map:
+      - clutch_practice
+    clutch_practice:
+      - [90000, 12, 4, 0, 180]
+      - [90000, 13, 0] #CombatBot (向きはplayerに向く)
+  practice_chest:
+    map:
+      - chest_practice
+    chest_practice:
+      - [79989, 10, 12, -125, 20] #player
+      - [79994, 9, 13, 0] #chest1
+      - [79992, 6, 6, 0] #chest2
+      - [79994, 6, 3, 0] #chest3 (いくらでも設置可)
+  practice_bridge:
+    map:
+      - bridge_practice
+    bridge_practice:
+      - [60002, 11, 0, 0, 0]
+  practice_bed:
+    map:
+      - blockin_practice
+    blockin_practice:
+      - [89996, 19, 19, 180, 0]
+      - [89996, 19, 7, 0] #bed
+
+knockback:
+  mineage_kb:
+    horizontal: 0.4
+    vertical: 0.4
+    horizontalLimitkb: false
+    verticalLimitkb: 3
+    horizontallimit: false
+    verticalLimit: 0.3
+  potlounge_kb:
+    horizontal: 0
+    vertical: 0
+    horizontalLimitkb: 0
+    verticalLimitkb: 0
+    horizontallimit: false
+    verticalLimit: 0.3
+  hive_kb:
+    horizontal: 0
+    vertical: 0
+    horizontalLimitkb: 0
+    verticalLimitkb: 0
+    horizontallimit: false
+    verticalLimit: 0.3
+  combo:
+    horizontal: 0.34
+    vertical: 0.34
+    horizontalLimitkb: false
+    verticalLimitkb: 1.8
+    horizontallimit: false
+    verticalLimit: 0.4
+
+settings: #デフォルトの奴
+  sound_block: true
+  sound_hurt: true
+  sound_volume: 100 # 0~500
+  particle_enable: true
+  scoreboard:
+    show: true
+    status: true
+    info: true
+    playing: true
+    ping: true
+    drop: false
+    opporent_info: true
+    combat: true
+    #name
+    name_show: true
+    nocombat_device: true
+    nocombat_ping: true
+    nocombat_drop: false
+    incombat_ping: true
+    incombat_cps: true
+    incombat_drop: true
+  actionbar_setting:
+    alwaysshow: true
+    cpscount: true
+    reach: true
+    combo: true
+    ping: false
+  chat_setting:
+    chat: true
+    jqmessage: true
+    announge: true
+    killlog: true
+    combatlog: true
+    notification: true
+    duel_message: true
+  title:
+    countdown: true
+    result: true
+    other: true
+  duel_request: true
+  party_request: true
+  show_killstreak: true # 公開するかどうか
+  crit_particle: 1 # 0 = hide, 1 = default, 2 = hit, 3 = always
+  spawn_protection: 0.5 # 秒
+  toggle_sprint: false
+  fullbright: false
+  arena_respawn: false
+  nick: false
+  duel_result: true
+  potion_color: 1 # 計算式はscratchの奴
+  lobby_hide: false # lobbyでほかのプレイヤー表示するか
+  lighting_kill: true
+  smooth_pearl: true
+  disable_animation: true
+  move_packet: true # true = move_entity, false = move_player
+  player_nametag: true
+  vanilla_hook: false
+  item:_info: default
+  lang: en
+  rain: false
+  cpslimit: false
+  hide non opporent: false
+  time: 1000 # -1の場合うごく
+  duel_invite: true
+  party_invite: true
+cosmetics:
+  useing:
+    skin: defalt
+    cape: defalt
+    hat: defalt
+    particle:
+      player: defalt
+      kill: defalt
+      projectile: defalt
+      beddestroy: defalt
+    title: defalt
+    killphase: defalt
+  skin:
+    - defalt
+  cape:
+    - defalt
+  hat:
+    - defalt
+  particle:
+    - defalt
+  title:
+    - defalt
+  killphase:
+    - defalt
+
+kits:
+  void_v1:
+    name: void
+    item:
+      0:
+        item: AIR
+        count: 1
+        name: default
+        id: -1
+  queue_v1:
+    name: Queue
+    item:
+      8:
+        item: DYE
+        count: 1
+        name: item.queue.leave
+        id: 10002
+        data:
+          - dye:RED
+  queue2_v1:
+    name: Queue
+    item:
+      8:
+        item: DYE
+        count: 1
+        name: item.queue.leave
+        id: 10003
+        data:
+          - dye:RED
+  party_v1:
+    name: Party
+    item:
+      0:
+        item: DIAMOND_SWORD
+        count: 1
+        name: party.item.duel
+        id: 101
+        data:
+          - Unbreakable
+      1:
+        item: IRON_SWORD
+        count: 1
+        name: party.item.duel.split
+        id: 102
+        data:
+          - Unbreakable
+      2:
+        item: GOLDEN_SWORD
+        count: 1
+        name: party.item.ffa
+        id: 103
+        data:
+          - Unbreakable
+      3:
+        item: PAPER
+        count: 1
+        name: party.item.vote
+        id: 108
+        data:
+          - Unbreakable
+      6:
+        item: END_CRYSTAL
+        count: 1
+        name: party.item.info
+        id: 119
+      7:
+        item: COMPASS
+        count: 1
+        name: item.lobby.settings
+        id: 6
+      8:
+        item: RECOVERY_COMPASS
+        count: 1
+        name: party.item.settings
+        id: 109
+  party_player_v1:
+    name: Party
+    item:
+      0:
+        item: DIAMOND_SWORD
+        count: 1
+        name: party.item.bot
+        id: 1050
+        data:
+          - Unbreakable
+      1:
+        item: IRON_SWORD
+        count: 1
+        name: item.lobby.practice
+        id: 1060
+        data:
+          - Unbreakable
+      2:
+        item: GOLDEN_SWORD
+        count: 1
+        name: party.item.ffa
+        id: 103
+        data:
+          - Unbreakable
+      3:
+        item: PAPER
+        count: 1
+        name: party.item.vote
+        id: 108
+        data:
+          - Unbreakable
+      6:
+        item: END_CRYSTAL
+        count: 1
+        name: party.item.info
+        id: 119
+      7:
+        item: COMPASS
+        count: 1
+        name: item.lobby.settings
+        id: 6
+      8:
+        item: DYE
+        count: 1
+        name: item.queue.leave
+        id: 110
+        data:
+          - dye:RED
+  lobby_v1:
+    name: Lobby
+    item:
+      0:
+        item: DIAMOND_SWORD
+        count: 1
+        name: item.lobby.ffa #lang (default or 項目なし)
+        id: 0 #サーバーサイドの識別IDなのでわからない場合はとりあえず-1でok
+        data: #書かなくてもok
+          - Unbreakable
+      1:
+        item: IRON_SWORD
+        count: 1
+        name: item.lobby.duel
+        id: 1
+        data:
+          - Unbreakable
+      2:
+        item: GOLDEN_PICKAXE
+        count: 1
+        name: item.lobby.practice
+        id: 2
+        data:
+          - Unbreakable
+      4:
+        item: NETHER_STAR
+        count: 1
+        name: item.lobby.party
+        id: 3
+      6:
+        item: DIAMOND
+        count: 1
+        name: item.lobby.spectate
+        id: 4
+      7:
+        item: NAME_TAG
+        count: 1
+        name: item.lobby.cosmetic
+        id: 5
+      8:
+        item: COMPASS
+        count: 1
+        name: item.lobby.settings
+        id: 6
+      19:
+        item: CLOCK
+        count: 1
+        name: item.lobby.region
+        id: 7
+      21:
+        item: STICK
+        count: 1
+        name: item.lobby.knockback
+        id: 8
+      23:
+        item: ENCHANTED_BOOK
+        count: 1
+        name: item.lobby.update
+        id: 9
+      25:
+        item: PAPER
+        count: 1
+        name: item.lobby.report
+        id: 10
+
+  otic_v1:
+    name: OTIC
+    item:
+      0:
+        item: BOW
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - enchant:UNBREAKING:1
+      1:
+        item: WOODEN_HOE
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+      8:
+        item: ARROW
+        count: 1
+        name: default
+        id: -1
+        data:
+          - cooltime:arrow
+      36:
+        item: LEATHER_CAP
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+      37:
+        item: LEATHER_TUNIC
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+      38:
+        item: LEATHER_PANTS
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+      39:
+        item: LEATHER_BOOTS
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+
+  nodebuff_v1:
+    name: Nodebuff
+    item:
+      0:
+        item: DIAMOND_SWORD
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - enchant:UNBREAKING:1
+      1:
+        item: ENDER_PEARL
+        count: 16
+        name: default
+        id: 10000
+      2:
+        item: SPLASH_POTION
+        count: 1
+        name: item.feather
+        id: -1
+        data:
+          - potion:STRONG_HEALING
+      3:
+        item: SPLASH_POTION
+        count: 1
+        name: item.feather
+        id: -1
+        data:
+          - potion:STRONG_HEALING
+      4:
+        item: SPLASH_POTION
+        count: 1
+        name: item.feather
+        id: -1
+        data:
+          - potion:STRONG_HEALING
+      5:
+        item: SPLASH_POTION
+        count: 1
+        name: item.feather
+        id: -1
+        data:
+          - potion:STRONG_HEALING
+      6:
+        item: SPLASH_POTION
+        count: 1
+        name: item.feather
+        id: -1
+        data:
+          - potion:STRONG_HEALING
+      7:
+        item: SPLASH_POTION
+        count: 1
+        name: item.feather
+        id: -1
+        data:
+          - potion:STRONG_HEALING
+      8:
+        item: SPLASH_POTION
+        count: 1
+        name: item.feather
+        id: -1
+        data:
+          - potion:STRONG_HEALING
+      9:
+        item: SPLASH_POTION
+        count: 1
+        name: item.feather
+        id: -1
+        data:
+          - potion:STRONG_HEALING
+      10:
+        item: SPLASH_POTION
+        count: 1
+        name: item.feather
+        id: -1
+        data:
+          - potion:STRONG_HEALING
+      11:
+        item: SPLASH_POTION
+        count: 1
+        name: item.feather
+        id: -1
+        data:
+          - potion:STRONG_HEALING
+      12:
+        item: SPLASH_POTION
+        count: 1
+        name: item.feather
+        id: -1
+        data:
+          - potion:STRONG_HEALING
+      13:
+        item: SPLASH_POTION
+        count: 1
+        name: item.feather
+        id: -1
+        data:
+          - potion:STRONG_HEALING
+      14:
+        item: SPLASH_POTION
+        count: 1
+        name: item.feather
+        id: -1
+        data:
+          - potion:STRONG_HEALING
+      15:
+        item: SPLASH_POTION
+        count: 1
+        name: item.feather
+        id: -1
+        data:
+          - potion:STRONG_HEALING
+      16:
+        item: SPLASH_POTION
+        count: 1
+        name: item.feather
+        id: -1
+        data:
+          - potion:STRONG_HEALING
+      17:
+        item: SPLASH_POTION
+        count: 1
+        name: item.feather
+        id: -1
+        data:
+          - potion:STRONG_HEALING
+      18:
+        item: SPLASH_POTION
+        count: 1
+        name: item.feather
+        id: -1
+        data:
+          - potion:STRONG_HEALING
+      19:
+        item: SPLASH_POTION
+        count: 1
+        name: item.feather
+        id: -1
+        data:
+          - potion:STRONG_HEALING
+      20:
+        item: SPLASH_POTION
+        count: 1
+        name: item.feather
+        id: -1
+        data:
+          - potion:STRONG_HEALING
+      21:
+        item: SPLASH_POTION
+        count: 1
+        name: item.feather
+        id: -1
+        data:
+          - potion:STRONG_HEALING
+      22:
+        item: SPLASH_POTION
+        count: 1
+        name: item.feather
+        id: -1
+        data:
+          - potion:STRONG_HEALING
+      23:
+        item: SPLASH_POTION
+        count: 1
+        name: item.feather
+        id: -1
+        data:
+          - potion:STRONG_HEALING
+      24:
+        item: SPLASH_POTION
+        count: 1
+        name: item.feather
+        id: -1
+        data:
+          - potion:STRONG_HEALING
+      25:
+        item: SPLASH_POTION
+        count: 1
+        name: item.feather
+        id: -1
+        data:
+          - potion:STRONG_HEALING
+      26:
+        item: SPLASH_POTION
+        count: 1
+        name: item.feather
+        id: -1
+        data:
+          - potion:STRONG_HEALING
+      27:
+        item: SPLASH_POTION
+        count: 1
+        name: item.feather
+        id: -1
+        data:
+          - potion:STRONG_HEALING
+      28:
+        item: SPLASH_POTION
+        count: 1
+        name: item.feather
+        id: -1
+        data:
+          - potion:STRONG_HEALING
+      29:
+        item: SPLASH_POTION
+        count: 1
+        name: item.feather
+        id: -1
+        data:
+          - potion:STRONG_HEALING
+      30:
+        item: SPLASH_POTION
+        count: 1
+        name: item.feather
+        id: -1
+        data:
+          - potion:STRONG_HEALING
+      31:
+        item: SPLASH_POTION
+        count: 1
+        name: item.feather
+        id: -1
+        data:
+          - potion:STRONG_HEALING
+      32:
+        item: SPLASH_POTION
+        count: 1
+        name: item.feather
+        id: -1
+        data:
+          - potion:STRONG_HEALING
+      33:
+        item: SPLASH_POTION
+        count: 1
+        name: item.feather
+        id: -1
+        data:
+          - potion:STRONG_HEALING
+      34:
+        item: SPLASH_POTION
+        count: 1
+        name: item.feather
+        id: -1
+        data:
+          - potion:STRONG_HEALING
+      35:
+        item: SPLASH_POTION
+        count: 1
+        name: item.feather
+        id: -1
+        data:
+          - potion:STRONG_HEALING
+      36:
+        item: DIAMOND_HELMET
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - enchant:UNBREAKING:1
+      37:
+        item: DIAMOND_CHESTPLATE
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - enchant:UNBREAKING:1
+      38:
+        item: DIAMOND_LEGGINGS
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - enchant:UNBREAKING:1
+      39:
+        item: DIAMOND_BOOTS
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - enchant:UNBREAKING:1
+  builduhc_v1:
+    name: BuildUHC
+    item:
+      0:
+        item: DIAMOND_SWORD
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - enchant:UNBREAKING:1
+      1:
+        item: FISHING_ROD
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - enchant:UNBREAKING:1
+      2:
+        item: BOW
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - enchant:UNBREAKING:1
+          - enchant:POWER:2
+      3:
+        item: LAVA_BUCKET
+        count: 1
+        name: default
+        id: -1
+      4:
+        item: WATER_BUCKET
+        count: 1
+        name: default
+        id: -1
+      5:
+        item: GOLDEN_APPLE
+        count: 6
+        name: default
+        id: -1
+      6:
+        item: GOLD_INGOT
+        count: 3
+        name: item.gapple
+        id: 10001
+      7:
+        item: BLOCK_COBBLESTONE
+        count: 64
+        name: default
+        id: -1
+      8:
+        item: BLOCK_OAK_PLANKS
+        count: 64
+        name: default
+        id: -1
+      17:
+        item: ARROW
+        count: 32
+        name: default
+        id: -1
+      28:
+        item: DIAMOND_PICKAXE
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - enchant:UNBREAKING:1
+          - enchant:EFFICIENCY:1
+      29:
+        item: DIAMOND_AXE
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - enchant:UNBREAKING:1
+          - enchant:EFFICIENCY:1
+      30:
+        item: LAVA_BUCKET
+        count: 1
+        name: default
+        id: -1
+      31:
+        item: WATER_BUCKET
+        count: 1
+        name: default
+        id: -1
+      34:
+        item: BLOCK_COBBLESTONE
+        count: 64
+        name: default
+        id: -1
+      35:
+        item: BLOCK_OAK_PLANKS
+        count: 64
+        name: default
+        id: -1
+      36:
+        item: DIAMOND_HELMET
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - enchant:UNBREAKING:1
+      37:
+        item: DIAMOND_CHESTPLATE
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - enchant:UNBREAKING:1
+      38:
+        item: DIAMOND_LEGGINGS
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - enchant:UNBREAKING:1
+      39:
+        item: DIAMOND_BOOTS
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - enchant:UNBREAKING:1
+  combo_v1:
+    name: Combo
+    item:
+      0:
+        item: DIAMOND_SWORD
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - enchant:UNBREAKING:1
+      1:
+        item: ENCHANTED_GOLDEN_APPLE
+        count: 64
+        name: default
+        id: -1
+      36:
+        item: DIAMOND_HELMET
+        count: 1
+        name: default
+        id: -1
+      37:
+        item: DIAMOND_CHESTPLATE
+        count: 1
+        name: default
+        id: -1
+      38:
+        item: DIAMOND_LEGGINGS
+        count: 1
+        name: default
+        id: -1
+      39:
+        item: DIAMOND_BOOTS
+        count: 1
+        name: default
+        id: -1
+  midfight_v1:
+    name: MidFight
+    item:
+      0:
+        item: DIAMOND_SWORD
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - enchant:UNBREAKING:1
+      36:
+        item: DIAMOND_HELMET
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - enchant:UNBREAKING:1
+      37:
+        item: DIAMOND_CHESTPLATE
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - enchant:UNBREAKING:1
+      38:
+        item: DIAMOND_LEGGINGS
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - enchant:UNBREAKING:1
+      39:
+        item: DIAMOND_BOOTS
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - enchant:UNBREAKING:1
+  bridge_v1:
+    name: Bridge
+    item:
+      0:
+        item: IRON_SWORD
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - enchant:UNBREAKING:1
+      1:
+        item: SHEARS
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+      2:
+        item: BLOCK_WOOL
+        count: 64
+        name: default
+        id: -1
+        data:
+          - team:wool
+      3:
+        item: BLOCK_WOOL
+        count: 64
+        name: default
+        id: -1
+        data:
+          - team:wool
+      4:
+        item: BOW
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - enchant:UNBREAKING:1
+      5:
+        item: GOLDEN_APPLE
+        count: 5
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+      8:
+        item: ARROW
+        count: 1
+        name: default
+        id: -1
+        data:
+          - cooltime:arrow
+      37:
+        item: LEATHER_TUNIC
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - team:armor
+          - enchant:UNBREAKING:1
+      38:
+        item: LEATHER_PANTS
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - team:armor
+          - enchant:UNBREAKING:1
+      39:
+        item: LEATHER_BOOTS
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - team:armor
+          - enchant:UNBREAKING:1
+  pearlfight_v1:
+    name: MidFight
+    item:
+      0:
+        item: STICK
+        count: 1
+        name: default
+        id: -1
+        data:
+          - enchant:KNOCKBACK:2
+      1:
+        item: SHEARS
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+      2:
+        item: BLOCK_WOOL
+        count: 32
+        name: default
+        id: -1
+        data:
+          - team:wool
+      8:
+        item: ENDER_PEARL
+        count: 16
+        name: default
+        id: -1
+  bedfight_v1:
+    name: BedFight
+    item:
+      0:
+        item: STONE_SWORD
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - enchant:UNBREAKING:1
+      1:
+        item: STONE_AXE
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+      2:
+        item: STONE_PICKAXE
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+      3:
+        item: BLOCK_WOOL
+        count: 64
+        name: default
+        id: -1
+        data:
+          - team:wool
+      4:
+        item: BLOCK_WOOL
+        count: 64
+        name: default
+        id: -1
+        data:
+          - team:wool
+      8:
+        item: SHEARS
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+      36:
+        item: LEATHER_CAP
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - team:armor
+          - enchant:UNBREAKING:1
+      37:
+        item: LEATHER_TUNIC
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - team:armor
+          - enchant:UNBREAKING:1
+      38:
+        item: LEATHER_PANTS
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - team:armor
+          - enchant:UNBREAKING:1
+      39:
+        item: LEATHER_BOOTS
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - team:armor
+          - enchant:UNBREAKING:1
+  crystal_v1:
+    name: Crystal
+    item:
+      0:
+        item: NETHERITE_SWORD
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - enchant:UNBREAKING:1
+      1:
+        item: NETHERITE_PICKAXE
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - enchant:UNBREAKING:1
+          - enchant:EFFICIENCY:5
+      2:
+        item: GOLDEN_APPLE
+        count: 64
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+      3:
+        item: BLOCK_OBSIDIAN
+        count: 64
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+      4:
+        item: BLOCK_OBSIDIAN
+        count: 64
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+      5:
+        item: END_CRYSTAL
+        count: 64
+        name: default
+        id: -1
+      6:
+        item: END_CRYSTAL
+        count: 64
+        name: default
+        id: -1
+      7:
+        item: BOW
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - enchant:UNBREAKING:1
+      8:
+        item: ENDER_PEARL
+        count: 16
+        name: default
+        id: -1
+      9:
+        item: TOTEM
+        count: 1
+        name: default
+        id: -1
+      10:
+        item: TOTEM
+        count: 1
+        name: default
+        id: -1
+      11:
+        item: TOTEM
+        count: 1
+        name: default
+        id: -1
+      12:
+        item: TOTEM
+        count: 1
+        name: default
+        id: -1
+      13:
+        item: TOTEM
+        count: 1
+        name: default
+        id: -1
+      14:
+        item: TOTEM
+        count: 1
+        name: default
+        id: -1
+      15:
+        item: TOTEM
+        count: 1
+        name: default
+        id: -1
+      16:
+        item: TOTEM
+        count: 1
+        name: default
+        id: -1
+      17:
+        item: TOTEM
+        count: 1
+        name: default
+        id: -1
+      18:
+        item: TOTEM
+        count: 1
+        name: default
+        id: -1
+      19:
+        item: TOTEM
+        count: 1
+        name: default
+        id: -1
+      20:
+        item: TOTEM
+        count: 1
+        name: default
+        id: -1
+      21:
+        item: TOTEM
+        count: 1
+        name: default
+        id: -1
+      22:
+        item: TOTEM
+        count: 1
+        name: default
+        id: -1
+      23:
+        item: TOTEM
+        count: 1
+        name: default
+        id: -1
+      24:
+        item: TOTEM
+        count: 1
+        name: default
+        id: -1
+      25:
+        item: TOTEM
+        count: 1
+        name: default
+        id: -1
+      26:
+        item: TOTEM
+        count: 1
+        name: default
+        id: -1
+      30:
+        item: BLOCK_OBSIDIAN
+        count: 64
+        name: default
+        id: -1
+      31:
+        item: BLOCK_OBSIDIAN
+        count: 64
+        name: default
+        id: -1
+      32:
+        item: END_CRYSTAL
+        count: 64
+        name: default
+        id: -1
+      33:
+        item: END_CRYSTAL
+        count: 64
+        name: default
+        id: -1
+      34:
+        item: ARROW
+        count: 32
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+      35:
+        item: ENDER_PEARL
+        count: 16
+        name: default
+        id: -1
+      36:
+        item: NETHERITE_HELMET
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - enchant:UNBREAKING:1
+          - enchant:BLAST_PROTECTION:3
+      37:
+        item: NETHERITE_CHESTPLATE
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - enchant:UNBREAKING:1
+          - enchant:BLAST_PROTECTION:3
+      38:
+        item: NETHERITE_LEGGINGS
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - enchant:UNBREAKING:1
+          - enchant:BLAST_PROTECTION:3
+      39:
+        item: NETHERITE_BOOTS
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - enchant:UNBREAKING:1
+          - enchant:BLAST_PROTECTION:3
+      41:
+        item: TOTEM
+        count: 1
+        name: default
+        id: -1
+  boxing:
+    name: Boxing
+    item:
+      0:
+        item: DIAMOND_SWORD
+        count: 1
+        name: default
+        id: -1
+        data:
+          - Unbreakable
+          - enchant:UNBREAKING:1
+  sumo_v1:
+    name: Party
+    item:
+      0:
+        item: STICK
+        count: 1
+        name: default
+        id: -1
+  practice_v1:
+    name: Practice
+    item:
+      0:
+        item: DIAMOND_SWORD
+        count: 1
+        name: practice.item.start
+        id: 202
+        data:
+          - Unbreakable
+      1:
+        item: EMERALD
+        count: 1
+        name: practice.item.record
+        id: 203
+      4:
+        item: COMPASS
+        count: 1
+        name: practice.item.settings
+        id: 204
+      8:
+        item: DYE
+        count: 1
+        name: item.queue.leave
+        id: 10003
+        data:
+          - dye:RED
