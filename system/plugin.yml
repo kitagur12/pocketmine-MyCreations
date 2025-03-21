@@ -1,0 +1,41 @@
+name: system
+version: 1.0.0
+main: core\Main
+api: 5.0.0
+
+commands:
+  
+  night_vision:
+    description: Give night vision effect
+    usage: /night_vision
+    permission: c.test
+    aliases: [nv, effect]
+
+  ping:
+    description: Check your ping and server TPS
+    usage: /ping
+    permission: c.test
+
+  stage:
+    description: Goto stage
+    usage: /stage 0
+    permission: c.test
+
+  ff:
+    description: forfeit yourself
+    usage: /ff
+    permission: c.test
+
+  playerdata:
+    description: find Player Status
+    usage: /playerdata <player>
+    permission: c.test
+  plv:
+    description: test
+    usage: /playerdata <player>
+    permission: c.test
+
+permissions:
+  c.test:
+    description: Allows the player to use specific commands
+    default: true

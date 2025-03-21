@@ -1,0 +1,86 @@
+config:
+    moderate:
+        enable: true #アンチチート全体の有効、無効
+        notificationperm: #警告の通知をするプレイヤーのPermission
+            - pocketmine.group.operator
+        kickbypass: #kick及びbanから除外するpermission
+            - pocketmine.group.opaerator
+        bypass: #検知から除外するpermission
+            - pocketmine.group.aaaaaaaaa
+        ban:
+            enable: true
+            message: true
+        kick:
+            enable: true
+            message: "you are kicked fron this server\nReason: {reason}\nUntil: {until_unban}\n§eBanner: {staff}"
+#messageについて:
+#通常マインクラフトで使用できるunicodeエスケープのほか、以下の変数があります。
+#{player} = 対象のプレイヤー名
+#{reason} = 対象のkick\ban理由
+#{time} = 現在の時刻
+#{staff} = kick\banを行ったプレイヤー名(ACの自動の場合はAnti-Cheatと表示されます)
+#{until} = ban期間の秒数
+#{until_unban} = unbanまでの期間
+
+    proxy: #proxy検知
+        enable: true
+        allay: #検知されてもkickしないIP（portは_で区切る）
+            - 127.0.0.1_19132
+
+    webhook:
+        enable: true #webhookの有効、無効
+        url: https://discordapp.com/api/webhooks/0000000000000000000/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        iconUrl: "https://i.imgur.com/23Mv0V5.png"
+        ban: true
+        kick: true
+        alert: true
+
+    sql: #sql設定に情報を記録するので必須です。
+        host: 127.0.0.1
+        username: root
+        password: "ql2M6QjfkdzSU70e51caiIW5tikHtJgnrT3z7WMduzJhg8BXH6" #defalt = ""
+        schema: hentai #defalt = your_schema
+        port: 12766 #defalt = 3306
+
+    debug:
+        enable: true
+
+    other:
+        commandperm: pocketmine.group.operator #コマンドのプレイヤーのPermission
+
+    detection_only: false #長いので※1へ
+    checks:
+        autoclick(A):
+            enable: true
+            cpslimit: true #0~20 (20以上に設定した場合エンティティに対してのみ有効になります)
+            maxlv: 1 #続けた秒数
+            punishment: kick
+        autoclick(B):
+            enable: true
+            minimum: 10 #指定したCPS以下の場合検知しない
+            jitter: 2 #CPSのずれの許容範囲
+            maxlv: 1 #強さ（cpsによってflagまでの時間が変動するため倍率設定）
+            punishment: kick
+        fly(A):
+            enable: true
+            maxlv: 3
+            punishment: ban
+        fly(B):
+            enable: true
+            maxlv: 3
+            punishment: ban
+        invalidpackets:
+            enable: true
+            maxlv: 1
+            punishment: ban
+
+    #※1 について(detection_only)            !!!!!!!!!!!!!!!!!!!!!!!!     未実装です     !!!!!!!!!!!!!!!!!!!!!!!!
+    #
+    #このモードはbanやkickなどをこのプラグインで行わず、サーバー側で制御したい場合などにほかのプラグインで読み取り可能なメソッドとして送信するこのができます。
+    #trueの場合は送信、falseの場合はこのプラグインのみで処理を行います。
+    #----------------------------以下受信方法----------------------------
+    # use hentai\event\getdetection;
+    # 例:   public function setdetection(getdetection $event): void {}
+    #
+    #
+    #
