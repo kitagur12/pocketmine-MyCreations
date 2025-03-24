@@ -9,9 +9,9 @@ texture_packs:
 
 database:
   main:
-    host: 127.0.0.1:12766 #ip or sqlite path
+    host: 127.0.0.1:3306 #ip or sqlite path
     username: root
-    password: "ql2M6QjfkdzSU70e51caiIW5tikHtJgnrT3z7WMduzJhg8BXH6"
+    password: "password"
     schema: feather
 
 api: ""
